@@ -1,0 +1,65 @@
+// Import base styles and variables
+@use 'base/variables' as *;
+@use 'base/reset';
+
+// Import components
+@use 'components/header';
+@use 'components/profile';
+@use 'components/buttons';
+@use 'components/navigation';
+
+// Global styles
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+}
+
+// Layout
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @include tablet {
+    padding: 0 2rem;
+  }
+}
+
+// Global styles
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: 'Roboto', sans-serif;
+}
+
+// Mixins
+@mixin mobile {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: 'Roboto', sans-serif;
+}
+
+// Base styles already moved to components
+
+// Component styles moved to their respective files
